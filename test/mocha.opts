@@ -1,0 +1,4 @@
+--require test/common
+--reporter dot
+--ui bdd
+--recursive
