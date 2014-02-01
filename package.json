@@ -16,14 +16,20 @@
   , "karma-plugin"
   , "karma-launcher"
   ]
+, "peerDependencies":
+  { "react-tools": "*"
+  }
+, "devDependencies":
+  { "chai": "~1.9.0"
+  , "mocha": "~1.17.1"
+  , "fzkes": "~0.13.0"
+
+  , "react-tools": "*"
+  }
 , "author": "Benjamin Horsleben"
 , "license": "WTFPL"
 , "bugs":
   { "url": "https://github.com/fizker/karma-react-jsx-preprocessor/issues"
   }
 , "homepage": "https://github.com/fizker/karma-react-jsx-preprocessor"
-, "devDependencies":
-  { "chai": "~1.9.0"
-  , "mocha": "~1.17.1"
-  }
 }
