@@ -1,5 +1,5 @@
 { "name": "karma-react-jsx-preprocessor"
-, "version": "0.0.0"
+, "version": "0.1.0"
 , "description": "A karma preprocessor for compiling React JSX files."
 , "main": "index.js"
 , "scripts":
