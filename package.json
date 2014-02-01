@@ -1,0 +1,29 @@
+{ "name": "karma-react-jsx-preprocessor"
+, "version": "0.0.0"
+, "description": "A karma preprocessor for compiling React JSX files."
+, "main": "index.js"
+, "scripts":
+  { "test": "mocha"
+  }
+, "repository":
+  { "type": "git"
+  , "url": "git://github.com/fizker/karma-react-jsx-preprocessor.git"
+  }
+, "keywords":
+  [ "jsx"
+  , "react.js"
+  , "karma"
+  , "karma-plugin"
+  , "karma-launcher"
+  ]
+, "author": "Benjamin Horsleben"
+, "license": "WTFPL"
+, "bugs":
+  { "url": "https://github.com/fizker/karma-react-jsx-preprocessor/issues"
+  }
+, "homepage": "https://github.com/fizker/karma-react-jsx-preprocessor"
+, "devDependencies":
+  { "chai": "~1.9.0"
+  , "mocha": "~1.17.1"
+  }
+}
