@@ -55,6 +55,17 @@ describe('unit/preprocessor.js', function() {
 				file.path
 					.should.equal('abc.js')
 			})
+			it('should keep .js file extension', function() {
+				file =
+					{ path: 'abc.js'
+					, originalPath: 'abc.js'
+					}
+				reactTools.transform.returns('transformed content')
+				callback = fzkes.fake('callback')
+				result('content', file, callback)
+				file.path
+					.should.equal('abc.js')
+			})
 		})
 	})
 })
