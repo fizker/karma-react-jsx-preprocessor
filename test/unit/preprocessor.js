@@ -27,7 +27,7 @@ describe('unit/preprocessor.js', function() {
 		var result
 		beforeEach(function() {
 			factory = module['preprocessor:react-jsx'][1]
-			result = factory()
+			result = factory(null, {});
 		})
 		it('should return another function taking 3 arguments', function() {
 			result.should.be.a('function')
@@ -67,5 +67,27 @@ describe('unit/preprocessor.js', function() {
 					.should.equal('abc.js')
 			})
 		})
+    describe('when a configuration is provided', function () {
+      var callback
+      var file
+      beforeEach(function() {
+        file =
+        { path: 'abc.jsx'
+          , originalPath: 'abc.jsx'
+        }
+        reactTools.transform.returns('transformed content')
+        callback = fzkes.fake('callback')
+      })
+      it('should keep the .jsx extension if the config property doNotChangeExt is true', function () {
+        result = factory(null, {
+          'react-jsx:preprocessor': {
+            doNotChangeFileExt: true
+          }
+        });
+        result('content', file, callback)
+        file.path
+          .should.equal('abc.jsx')
+      });
+    });
 	})
 })

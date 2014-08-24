@@ -19,5 +19,14 @@ will automatically transform the .jsx files.
 			},
 
 			// the rest of the config should be here
+
+			// configuring the preprocessor
+			'react-jsx:preprocessor' : {
+		        // by default the preprocessor will change the 
+		        // extension of the files from .jsx to .js.
+		        // This might be an issue in some situations.
+		        // Use this property to avoid the file to be renamed
+		        doNotChangeFileExt: true // default is false, change to true to prevent file extension change.
+		    }
 		})
 	}
