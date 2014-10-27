@@ -1,7 +1,3 @@
-module.exports =
-	{ 'preprocessor:react-jsx': ['factory', factory]
-	}
-
 var reactTools = require('react-tools')
 
 function factory(args, config, logger, helper) {
@@ -11,4 +7,8 @@ function factory(args, config, logger, helper) {
 		}
 		done(reactTools.transform(content))
 	}
+}
+
+module.exports = {
+	'preprocessor:react-jsx': ['factory', factory]
 }
