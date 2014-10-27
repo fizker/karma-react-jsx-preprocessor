@@ -51,20 +51,33 @@ describe('unit/preprocessor.js', function() {
 			it('should call the callback with the transformed content', function() {
 				callback.should.have.been.calledWith('transformed content')
 			})
-			it('should rename the file from .jsx to .js', function() {
-				file.path
-					.should.equal('abc.js')
-			})
-			it('should keep .js file extension', function() {
-				file =
-					{ path: 'abc.js'
-					, originalPath: 'abc.js'
-					}
-				reactTools.transform.returns('transformed content')
-				callback = fzkes.fake('callback')
-				result('content', file, callback)
-				file.path
-					.should.equal('abc.js')
+
+			describe('the file path', function(){
+				it('should be renamed by an optional transformPath function', function() {
+					result = factory(null, {
+						transformPath: function(fileName) {
+							return fileName.replace(/.jsx$/, '.jsx.js')
+						}
+					})
+					result('content', file, callback)
+					file.path
+					  .should.equal('abc.jsx.js')
+				})
+				it('should by default be renamed from .jsx to .js ', function() {
+					file.path
+						.should.equal('abc.js')
+				})
+				it('should by default keep .js file extension', function() {
+					file =
+						{ path: 'abc.js'
+						, originalPath: 'abc.js'
+						}
+					reactTools.transform.returns('transformed content')
+					callback = fzkes.fake('callback')
+					result('content', file, callback)
+					file.path
+						.should.equal('abc.js')
+				})
 			})
 		})
 	})
