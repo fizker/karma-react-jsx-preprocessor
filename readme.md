@@ -18,6 +18,14 @@ will automatically transform the .jsx files.
 				'**/*.jsx': [ 'react-jsx' ]
 			},
 
+			reactJsxPreprocessor : {
+				// transforming the filenames
+	      transformPath: function(path) {
+	        return path.replace(/\.jsx$/, '.jsx.js');
+	      }
+
+    	}
+
 			// the rest of the config should be here
 		})
 	}
