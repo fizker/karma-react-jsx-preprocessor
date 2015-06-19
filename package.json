@@ -1,35 +1,29 @@
-{ "name": "karma-react-jsx-preprocessor"
-, "version": "0.1.1"
-, "description": "A karma preprocessor for compiling React JSX files."
-, "main": "index.js"
-, "scripts":
-  { "test": "mocha"
-  }
-, "repository":
-  { "type": "git"
-  , "url": "git://github.com/fizker/karma-react-jsx-preprocessor.git"
-  }
-, "keywords":
-  [ "jsx"
-  , "react.js"
-  , "karma"
-  , "karma-plugin"
-  , "karma-launcher"
-  ]
-, "peerDependencies":
-  { "react-tools": "*"
-  }
-, "devDependencies":
-  { "chai": "~1.9.0"
-  , "mocha": "~1.17.1"
-  , "fzkes": "~0.13.0"
-
-  , "react-tools": "*"
-  }
-, "author": "Benjamin Horsleben"
-, "license": "WTFPL"
-, "bugs":
-  { "url": "https://github.com/fizker/karma-react-jsx-preprocessor/issues"
-  }
-, "homepage": "https://github.com/fizker/karma-react-jsx-preprocessor"
+{
+  "name": "karma-jsx",
+  "version": "0.1.1",
+  "description": "A karma preprocessor for compiling React JSX files.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/snit-ram/karma-react-jsx-preprocessor.git"
+  },
+  "keywords": ["jsx", "react.js", "karma", "karma-plugin", "karma-launcher"],
+  "peerDependencies": {
+    "react-tools": "*"
+  },
+  "devDependencies": {
+    "chai": "~1.9.0",
+    "mocha": "~1.17.1",
+    "fzkes": "~0.13.0",
+    "react-tools": "*"
+  },
+  "author": "Benjamin Horsleben",
+  "license": "WTFPL",
+  "bugs": {
+      "url": "https://github.com/snit-ram/karma-react-jsx-preprocessor/issues"
+  },
+  "homepage": "https://github.com/snit-ram/karma-react-jsx-preprocessor"
 }
