@@ -9,6 +9,6 @@ function factory(args, config, logger, helper) {
 		if (file.originalPath.substr(-4) == '.jsx') {
 			file.path = file.originalPath.slice(0, -1);
 		}
-		done(reactTools.transform(content))
+		done(reactTools.transform(content, config.jsx))
 	}
 }
